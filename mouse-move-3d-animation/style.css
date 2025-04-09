@@ -1,0 +1,177 @@
+*,
+*::before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary: #d1cac3;
+    --secondary: #000;
+    --alternate: #f4efe9;
+}
+
+html {
+    font-size: max(100vw/1920*10);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+/* navbar section */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    padding: 3rem;
+}
+
+.nav-title span {
+    font-size: 1.6rem;
+}
+
+/* hero section */
+
+.hero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-warpper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+
+.hero-gallery {
+    position: relative;
+    width: 100%;
+    height: 88rem;
+    perspective: 1000px;
+}
+
+.hero-gallery-frame {
+    position: absolute;
+    border: 1px solid var(--secondary);
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background-color: var(--alternate);
+    filter: drop-shadow(0px 1.125px 36px rgba(0, 0, 0, 0.15));
+    width: auto;
+    height: auto;
+}
+
+.hero-gallery-frame:nth-child(1) {
+    top: 11.3rem;
+    left: 80.3rem;
+    z-index: 1;
+}
+
+.hero-gallery-frame:nth-child(2) {
+    top: 5rem;
+    left: 29.5rem;
+}
+
+.hero-gallery-frame:nth-child(3) {
+    top: 20rem;
+    left: 10rem;
+    z-index: 2;
+}
+
+.hero-gallery-frame:nth-child(4) {
+    top: 25rem;
+    left: 62rem;
+    z-index: 2;
+
+}
+
+.hero-gallery-frame:nth-child(5) {
+    top: 10rem;
+    z-index: 2;
+    left: 150rem;
+}
+
+.hero-gallery-frame:nth-child(6) {
+    top: 43rem;
+    left: 140rem;
+}
+
+.hero-gallery-frame-figure {
+    position: relative;
+}
+
+.hero-gallery-frame:nth-child(1) .hero-gallery-frame-figure {
+    height: 49.5rem;
+    width: 67.5rem;
+}
+
+.hero-gallery-frame:nth-child(2) .hero-gallery-frame-figure {
+    height: 38.2rem;
+    width: 43.9rem;
+}
+
+.hero-gallery-frame:nth-child(3) .hero-gallery-frame-figure {
+    height: 57.3rem;
+    width: 41.6rem;
+}
+
+.hero-gallery-frame:nth-child(4) .hero-gallery-frame-figure {
+    height: 62rem;
+    width: 36rem;
+}
+
+.hero-gallery-frame:nth-child(5) .hero-gallery-frame-figure {
+    height: 30rem;
+    width: 30rem;
+}
+
+.hero-gallery-frame:nth-child(6) .hero-gallery-frame-figure {
+    height: 33rem;
+    width: 45rem;
+}
+
+.hero-gallery-frame-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-title {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+    mix-blend-mode: difference;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title h1 {
+    font-size: 25rem;
+    text-align: center;
+    color: #eeeeee;
+}
